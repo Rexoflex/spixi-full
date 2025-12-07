@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Spixi - Private Messaging & Crypto Wallet</title>
+  <meta name="description" content="Download Spixi for Windows, macOS, iOS, and Android. Private chat, IXI wallet, and Mini Apps in one secure app.">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@400;600;700&family=Lexend:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <a href="/" class="navbar__logo">
+        <img src="assets/icons/spixi-logo.svg" alt="Spixi" class="navbar__logo-icon">
+        <span class="navbar__logo-text">Spixi</span>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <div class="navbar__nav">
+        <a href="/index.html#features" class="navbar__link">Features</a>
+        <a href="/help-center.html" class="navbar__link">Help Center</a>
+        <a href="/mini-apps.html" class="navbar__link">Mini Apps</a>
+      </div>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="navbar__actions">
+        <a href="/download.html" class="btn btn-md btn-outlined">
+          <span class="btn__label">Download Spixi</span>
+        </a>
+      </div>
+
+      <!-- Mobile CTA & Hamburger -->
+      <div class="navbar__mobile">
+        <a href="/download.html" class="btn btn-md btn-outlined navbar__mobile-cta">
+          <span class="btn__label">Download Spixi</span>
+        </a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu">
+          <img src="assets/icons/list.svg" alt="" class="navbar__toggle-icon navbar__toggle-icon--menu">
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <div class="mobile-menu__header">
+      <a href="/" class="mobile-menu__logo">
+        <img src="assets/icons/spixi-logo.svg" alt="Spixi">
+      </a>
+      <button class="mobile-menu__close" id="navClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="/index.html#features" class="mobile-menu__link">Features</a>
+      <a href="/help-center.html" class="mobile-menu__link">Help Center</a>
+      <a href="/mini-apps.html" class="mobile-menu__link">Mini Apps</a>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a href="/download.html" class="btn btn-md btn-primary">
+        <span class="btn__label">Download Spixi</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Download Hero Section -->
+  <section class="download-hero">
+    <div class="download-hero__container">
+      <div class="download-hero__content">
+        <div class="download-hero__text">
+          <p class="download-hero__subtitle">Download</p>
+          <h1 class="download-hero__title">Get Spixi for mobile and desktop</h1>
+          <p class="download-hero__description">Private chat, IXI wallet, and Mini Apps in one secure app. No sign-up, no phone number, no tracking.</p>
+        </div>
+
+        <!-- CTA Buttons (Dynamic based on platform) -->
+        <div class="download-hero__cta">
+          <div class="download-hero__buttons">
+            <!-- Primary button (changes based on detected platform) -->
+            <a href="#" id="primary-download-btn" class="btn btn-lg btn-primary">
+              <span class="btn__icon btn__icon--leading">
+                <svg id="primary-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="btn__label" id="primary-btn-text">Download for Windows</span>
+            </a>
+
+            <!-- Secondary button (always "More platforms") -->
+            <a href="#platform-section" class="btn btn-lg btn-outlined">
+              <span class="btn__label">More platforms</span>
+            </a>
+          </div>
+
+          <!-- Version info (hidden for mobile stores) -->
+          <div class="download-hero__version" id="version-info">
+            <p class="download-hero__version-text">Current version: v0.9.14</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Section -->
+  <section class="platform-section" id="platform-section">
+    <div class="platform-section__container">
+      
+      <!-- Section Header -->
+      <div class="platform-section__header">
+        <div class="platform-section__overline">
+          <p class="platform-section__label">Download Options</p>
+        </div>
+        <h2 class="platform-section__title">Choose your platform</h2>
+        <p class="platform-section__description">Spixi runs on mobile and desktop. Pick your device to get the right download.</p>
+      </div>
+
+      <!-- Platform Cards Grid -->
+      <div class="platform-section__grid">
+        
+        <!-- Row 1: Mobile -->
+        <div class="platform-section__row">
+          
+          <!-- Android Card -->
+          <div class="card-md platform-card">
+            <div class="card-md__text">
+              <p class="card-md__category">Mobile/Tablet</p>
+              <h3 class="card-md__title">Android</h3>
+              <p class="card-md__body">Get Spixi from Google Play or install the APK directly.</p>
+            </div>
+            <div class="platform-card__actions">
+              <div class="platform-card__buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.spixi" target="_blank" rel="noopener noreferrer" class="platform-card__store-link">
+                  <img src="assets/images/google-play.png" alt="Get it on Google Play" class="platform-card__store-badge">
+                </a>
+                <a href="https://github.com/ProjectIxian/Spixi/releases/latest/download/spixi.apk" class="platform-card__download-link">
+                  <svg class="platform-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Download APK</span>
+                </a>
+              </div>
+              <p class="platform-card__requirement">Android 10 or newer</p>
+            </div>
+          </div>
+
+          <!-- iOS Card -->
+          <div class="card-md platform-card">
+            <div class="card-md__text">
+              <p class="card-md__category">Mobile/Tablet</p>
+              <h3 class="card-md__title">iOS</h3>
+              <p class="card-md__body">Install Spixi from the App Store on your iPhone or iPad.</p>
+            </div>
+            <div class="platform-card__actions">
+              <a href="https://apps.apple.com/app/spixi/id123456789" target="_blank" rel="noopener noreferrer" class="platform-card__store-link">
+                <img src="assets/images/app-store.png" alt="Download on the App Store" class="platform-card__store-badge">
+              </a>
+              <p class="platform-card__requirement">iOS 15 or newer</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Row 2: Desktop -->
+        <div class="platform-section__row">
+          
+          <!-- Windows Card -->
+          <div class="card-md platform-card">
+            <div class="card-md__text">
+              <p class="card-md__category">Desktop</p>
+              <h3 class="card-md__title">Windows</h3>
+              <p class="card-md__body">Desktop Spixi with all key features, including chat, wallet and Mini Apps.</p>
+            </div>
+            <div class="platform-card__actions">
+              <a href="https://github.com/ProjectIxian/Spixi/releases/latest/download/spixi-windows.exe" class="platform-card__download-link">
+                <svg class="platform-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Download for Windows</span>
+              </a>
+              <p class="platform-card__requirement">Windows 10 or newer</p>
+            </div>
+          </div>
+
+          <!-- macOS Card -->
+          <div class="card-md platform-card">
+            <div class="card-md__text">
+              <p class="card-md__category">Desktop</p>
+              <h3 class="card-md__title">Mac</h3>
+              <p class="card-md__body">Use Spixi on your Mac with desktop integration.</p>
+            </div>
+            <div class="platform-card__actions">
+              <a href="https://apps.apple.com/app/spixi/id123456789" target="_blank" rel="noopener noreferrer" class="platform-card__store-link">
+                <img src="assets/images/app-store.png" alt="Download on the App Store" class="platform-card__store-badge">
+              </a>
+              <p class="platform-card__requirement">macOS 12 or newer</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Info Blocks Section -->
+  <section class="info-blocks">
+    <div class="info-blocks__container">
+      
+      <!-- Block 1: What's Included -->
+      <div class="info-blocks__block">
+        <div class="info-blocks__header">
+          <h2 class="info-blocks__title">What's included in Spixi</h2>
+        </div>
+        
+        <div class="info-blocks__list">
+          <!-- List Item 1 -->
+          <div class="list-item">
+            <div class="list-item__icon">
+              <img src="assets/icons/ChatCircleDots.svg" alt="" class="list-item__icon-svg" width="32" height="32">
+            </div>
+            <div class="list-item__content">
+              <h3 class="list-item__title">Secure chat</h3>
+              <p class="list-item__text">One-to-one encrypted messaging and calls.</p>
+            </div>
+          </div>
+
+          <!-- List Item 2 -->
+          <div class="list-item">
+            <div class="list-item__icon">
+              <img src="assets/icons/Wallet.svg" alt="" class="list-item__icon-svg" width="32" height="32">
+            </div>
+            <div class="list-item__content">
+              <h3 class="list-item__title">Built-in IXI wallet</h3>
+              <p class="list-item__text">Send and receive IXI directly in the app.</p>
+            </div>
+          </div>
+
+          <!-- List Item 3 -->
+          <div class="list-item">
+            <div class="list-item__icon">
+              <img src="assets/icons/Sparkle.svg" alt="" class="list-item__icon-svg" width="32" height="32">
+            </div>
+            <div class="list-item__content">
+              <h3 class="list-item__title">Mini Apps</h3>
+              <p class="list-item__text">Try tools and games without leaving Spixi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="info-blocks__divider">
+
+      <!-- Block 2: First Time Using -->
+      <div class="info-blocks__block">
+        <div class="info-blocks__header">
+          <h2 class="info-blocks__title">First time using Spixi?</h2>
+          <p class="info-blocks__subtitle">A quick overview before you start.</p>
+        </div>
+        
+        <div class="info-blocks__cards">
+          <!-- Card 1 -->
+          <a href="/help-center.html" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/images/1.png" alt="" class="card-md__icon-img" width="48" height="48">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">Create your account</h3>
+              <p class="card-md__body">Set a nickname and password. No phone number or email is required.</p>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="/help-center.html" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/images/2.png" alt="" class="card-md__icon-img" width="48" height="48">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">Back up your account</h3>
+              <p class="card-md__body">Create a backup file and store it safely. It's the only way to restore access.</p>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="/help-center.html" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/images/3.png" alt="" class="card-md__icon-img" width="48" height="48">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">Add your first contact</h3>
+              <p class="card-md__body">Share your Spixi address or IXI Name and start your first secure chat.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <hr class="info-blocks__divider">
+
+      <!-- Block 3: Open Source -->
+      <div class="info-blocks__block">
+        <div class="info-blocks__header">
+          <h2 class="info-blocks__title">Open source & Ixian platform</h2>
+          <p class="info-blocks__subtitle">Spixi is open source and built on the Ixian platform.</p>
+        </div>
+        
+        <div class="info-blocks__cards">
+          <!-- Card 1 -->
+          <a href="https://github.com/ProjectIxian/Spixi" target="_blank" rel="noopener noreferrer" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/icons/github.svg" alt="" class="card-md__icon-svg" width="32" height="32">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">View source code on GitHub</h3>
+              <p class="card-md__body">Review the Spixi codebase and contribute on GitHub.</p>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="https://github.com/ProjectIxian/Spixi/releases" target="_blank" rel="noopener noreferrer" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/icons/Package.svg" alt="" class="card-md__icon-svg" width="32" height="32">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">See latest releases</h3>
+              <p class="card-md__body">Check changelogs and download builds from the official releases.</p>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="https://ixian.io" target="_blank" rel="noopener noreferrer" class="card-md card-md--clickable">
+            <div class="card-md__icon-container">
+              <img src="assets/icons/BookOpenText.svg" alt="" class="card-md__icon-svg" width="32" height="32">
+            </div>
+            <div class="card-md__text">
+              <h3 class="card-md__title">Read Ixian documentation</h3>
+              <p class="card-md__body">Learn more about the Ixian platform that powers Spixi.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      
+      <!-- Content Area -->
+      <div class="footer__content">
+        
+        <!-- Left Side: Brand + Socials -->
+        <div class="footer__left">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <img src="assets/icons/spixi-logo.svg" alt="" class="footer__logo-icon">
+              <span class="footer__logo-text">Spixi</span>
+            </div>
+            <p class="footer__tagline">Private messaging with IXI wallet and mini apps.</p>
+          </div>
+          <div class="footer__socials">
+            <a href="https://x.com/spixi" class="footer__social-link" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg class="footer__social-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.9 14.3L26.6 5.5H24.9L18.1 13.1L12.7 5.5H6L14.1 17.3L6 26.5H7.7L14.9 18.4L20.6 26.5H27.3L18.9 14.3ZM15.9 17.3L15.1 16.2L8.3 6.8H11.8L17.2 14.3L18 15.4L24.9 25.2H21.4L15.9 17.3Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://github.com/ProjectIxian/Spixi" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg class="footer__social-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 3C8.82 3 3 8.82 3 16C3 21.75 7.03 26.56 12.44 28.25C13.04 28.36 13.25 27.99 13.25 27.67C13.25 27.38 13.24 26.62 13.24 25.81C9.5 26.54 8.8 24.62 8.6 23.63C8.49 23.13 7.9 22.25 7.37 21.96C6.94 21.75 6.34 21.02 7.36 21.01C8.3 21 8.94 21.85 9.12 22.22C10.22 24.03 11.97 23.51 13.28 23.19C13.38 22.49 13.67 21.96 13.99 21.65C11.24 21.34 8.36 20.3 8.36 15.56C8.36 14.21 8.85 13.1 9.14 12.23C9.03 11.92 8.64 10.69 9.25 9.05C9.25 9.05 10.28 8.73 13.25 10.72C14.25 10.44 15.3 10.3 16.35 10.3C17.4 10.3 18.45 10.44 19.45 10.72C22.42 8.72 23.45 9.05 23.45 9.05C24.06 10.69 23.67 11.92 23.56 12.23C23.85 13.1 24.34 14.2 24.34 15.56C24.34 20.31 21.45 21.34 18.7 21.65C19.1 22 19.44 22.67 19.44 23.72C19.44 25.25 19.43 26.48 19.43 27.67C19.43 27.99 19.64 28.37 20.24 28.25C25.63 26.56 29.66 21.74 29.66 16C29.66 8.82 23.84 3 16.66 3H16Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Navigation -->
+        <div class="footer__nav">
+          <div class="footer__nav-column">
+            <h3 class="footer__nav-title">Product</h3>
+            <ul class="footer__nav-list">
+              <li><a href="/download.html" class="footer__nav-link">Download Spixi</a></li>
+              <li><a href="/index.html#features" class="footer__nav-link">How it works</a></li>
+              <li><a href="/mini-apps.html" class="footer__nav-link">Mini Apps</a></li>
+              <li><a href="/help-center.html" class="footer__nav-link">Help Center</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-column">
+            <h3 class="footer__nav-title">Company & legal</h3>
+            <ul class="footer__nav-list">
+              <li><a href="https://ixian.io" class="footer__nav-link" target="_blank" rel="noopener noreferrer">Ixian Website</a></li>
+              <li><a href="https://ixilabs.io" class="footer__nav-link" target="_blank" rel="noopener noreferrer">IXI Labs Website</a></li>
+              <li><a href="/privacy" class="footer__nav-link">Privacy Policy</a></li>
+              <li><a href="/terms" class="footer__nav-link">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <p class="footer__copyright">© 2025 IXI Labs. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/download.js"></script>
+  <script>
+    (function() {
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navClose = document.getElementById('navClose');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
+      let lastScrollTop = 0;
+      let scrollThreshold = 50;
+
+      // Scroll behavior
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Add scrolled class when page is scrolled down
+        if (scrollTop > scrollThreshold) {
+          navbar.classList.add('navbar--scrolled');
+        } else {
+          navbar.classList.remove('navbar--scrolled');
+        }
+
+        // Hide navbar when scrolling down, show when scrolling up
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+          // Scrolling down
+          navbar.classList.add('navbar--hidden');
+        } else {
+          // Scrolling up
+          navbar.classList.remove('navbar--hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }, false);
+
+      // Mobile menu toggle
+      function openMenu() {
+        mobileMenu.classList.add('mobile-menu--open');
+        document.body.classList.add('body--menu-open');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Close navigation');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('mobile-menu--open');
+        document.body.classList.remove('body--menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+      }
+
+      navToggle.addEventListener('click', openMenu);
+      navClose.addEventListener('click', closeMenu);
+
+      // Close menu when clicking a link
+      mobileMenuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMenu();
+        });
+      });
+
+      // Close menu when clicking outside
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+          closeMenu();
+        }
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-menu--open')) {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

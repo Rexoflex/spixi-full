@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Card Component - Usage Example</title>
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding: 40px;
+      background-color: var(--color-surface-01);
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    h1 {
+      color: var(--color-text-01);
+      font-family: var(--display-md-font-family);
+      font-size: var(--display-md-font-size);
+      margin-bottom: 8px;
+    }
+    p {
+      color: var(--color-text-02);
+      font-family: var(--body-md-font-family);
+      font-size: var(--body-md-font-size);
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>App Card Component</h1>
+  <p>Reusable component for displaying mini apps in grids. Copy the HTML structure below and update with your app data.</p>
+
+  <div class="example-grid">
+    
+    <!-- Example 1: AI Assistant -->
+    <article class="app-card">
+      <div class="app-card__header">
+        <img src="../assets/images/ai-assistant.png" alt="AI Assistant" class="app-card__image">
+        <span class="badge">AI & Tools</span>
+      </div>
+      <div class="app-card__content">
+        <div class="app-card__details">
+          <div class="app-card__meta">
+            <h3 class="app-card__title">AI Assistant</h3>
+            <p class="app-card__author">by Serg</p>
+          </div>
+          <p class="app-card__description">Local LLM accessed and charged over Spixi and Ixian Platform.</p>
+        </div>
+      </div>
+      <div class="app-card__footer">
+        <a href="#" class="btn btn-sm btn-outlined">
+          <span class="btn__label">Try in Spixi</span>
+          <span class="btn__icon btn__icon--trailing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <a href="https://github.com/ProjectIxian/Spixi" class="app-card__github" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C8.82 3 3 8.82 3 16C3 21.75 7.03 26.56 12.44 28.25C13.04 28.36 13.25 27.99 13.25 27.67C13.25 27.38 13.24 26.62 13.24 25.81C9.5 26.54 8.8 24.62 8.6 23.63C8.49 23.13 7.9 22.25 7.37 21.96C6.94 21.75 6.34 21.02 7.36 21.01C8.3 21 8.94 21.85 9.12 22.22C10.22 24.03 11.97 23.51 13.28 23.19C13.38 22.49 13.67 21.96 13.99 21.65C11.24 21.34 8.36 20.3 8.36 15.56C8.36 14.21 8.85 13.1 9.14 12.23C9.03 11.92 8.64 10.69 9.25 9.05C9.25 9.05 10.28 8.73 13.25 10.72C14.25 10.44 15.3 10.3 16.35 10.3C17.4 10.3 18.45 10.44 19.45 10.72C22.42 8.72 23.45 9.05 23.45 9.05C24.06 10.69 23.67 11.92 23.56 12.23C23.85 13.1 24.34 14.2 24.34 15.56C24.34 20.31 21.45 21.34 18.7 21.65C19.1 22 19.44 22.67 19.44 23.72C19.44 25.25 19.43 26.48 19.43 27.67C19.43 27.99 19.64 28.37 20.24 28.25C25.63 26.56 29.66 21.74 29.66 16C29.66 8.82 23.84 3 16.66 3H16Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Example 2: IXIJump -->
+    <article class="app-card">
+      <div class="app-card__header">
+        <img src="../assets/images/ixijump.png" alt="IXIJump" class="app-card__image">
+        <span class="badge badge--info">Games</span>
+      </div>
+      <div class="app-card__content">
+        <div class="app-card__details">
+          <div class="app-card__meta">
+            <h3 class="app-card__title">IXIJump</h3>
+            <p class="app-card__author">by Spoony</p>
+          </div>
+          <p class="app-card__description">A fast-paced tapping game built for Spixi. Simple and addictive.</p>
+        </div>
+      </div>
+      <div class="app-card__footer">
+        <a href="#" class="btn btn-sm btn-outlined">
+          <span class="btn__label">Try in Spixi</span>
+          <span class="btn__icon btn__icon--trailing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <a href="https://github.com/ProjectIxian/Spixi" class="app-card__github" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C8.82 3 3 8.82 3 16C3 21.75 7.03 26.56 12.44 28.25C13.04 28.36 13.25 27.99 13.25 27.67C13.25 27.38 13.24 26.62 13.24 25.81C9.5 26.54 8.8 24.62 8.6 23.63C8.49 23.13 7.9 22.25 7.37 21.96C6.94 21.75 6.34 21.02 7.36 21.01C8.3 21 8.94 21.85 9.12 22.22C10.22 24.03 11.97 23.51 13.28 23.19C13.38 22.49 13.67 21.96 13.99 21.65C11.24 21.34 8.36 20.3 8.36 15.56C8.36 14.21 8.85 13.1 9.14 12.23C9.03 11.92 8.64 10.69 9.25 9.05C9.25 9.05 10.28 8.73 13.25 10.72C14.25 10.44 15.3 10.3 16.35 10.3C17.4 10.3 18.45 10.44 19.45 10.72C22.42 8.72 23.45 9.05 23.45 9.05C24.06 10.69 23.67 11.92 23.56 12.23C23.85 13.1 24.34 14.2 24.34 15.56C24.34 20.31 21.45 21.34 18.7 21.65C19.1 22 19.44 22.67 19.44 23.72C19.44 25.25 19.43 26.48 19.43 27.67C19.43 27.99 19.64 28.37 20.24 28.25C25.63 26.56 29.66 21.74 29.66 16C29.66 8.82 23.84 3 16.66 3H16Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Example 3: Calculator -->
+    <article class="app-card">
+      <div class="app-card__header">
+        <img src="../assets/images/calculator.png" alt="Spixi Calculator" class="app-card__image">
+        <span class="badge badge--success">Utilities</span>
+      </div>
+      <div class="app-card__content">
+        <div class="app-card__details">
+          <div class="app-card__meta">
+            <h3 class="app-card__title">Spixi Calculator</h3>
+            <p class="app-card__author">by Spoony</p>
+          </div>
+          <p class="app-card__description">A simple calculator app that works offline inside Spixi chats.</p>
+        </div>
+      </div>
+      <div class="app-card__footer">
+        <a href="#" class="btn btn-sm btn-outlined">
+          <span class="btn__label">Try in Spixi</span>
+          <span class="btn__icon btn__icon--trailing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <a href="https://github.com/ProjectIxian/Spixi" class="app-card__github" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C8.82 3 3 8.82 3 16C3 21.75 7.03 26.56 12.44 28.25C13.04 28.36 13.25 27.99 13.25 27.67C13.25 27.38 13.24 26.62 13.24 25.81C9.5 26.54 8.8 24.62 8.6 23.63C8.49 23.13 7.9 22.25 7.37 21.96C6.94 21.75 6.34 21.02 7.36 21.01C8.3 21 8.94 21.85 9.12 22.22C10.22 24.03 11.97 23.51 13.28 23.19C13.38 22.49 13.67 21.96 13.99 21.65C11.24 21.34 8.36 20.3 8.36 15.56C8.36 14.21 8.85 13.1 9.14 12.23C9.03 11.92 8.64 10.69 9.25 9.05C9.25 9.05 10.28 8.73 13.25 10.72C14.25 10.44 15.3 10.3 16.35 10.3C17.4 10.3 18.45 10.44 19.45 10.72C22.42 8.72 23.45 9.05 23.45 9.05C24.06 10.69 23.67 11.92 23.56 12.23C23.85 13.1 24.34 14.2 24.34 15.56C24.34 20.31 21.45 21.34 18.7 21.65C19.1 22 19.44 22.67 19.44 23.72C19.44 25.25 19.43 26.48 19.43 27.67C19.43 27.99 19.64 28.37 20.24 28.25C25.63 26.56 29.66 21.74 29.66 16C29.66 8.82 23.84 3 16.66 3H16Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+</body>
+</html>
