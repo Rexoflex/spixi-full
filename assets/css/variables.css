@@ -307,6 +307,8 @@
   --z-index-fixed: 300;
   --z-index-modal: 500;
   --z-index-tooltip: 700;
+  --z-index-nav: 1000;
+  --z-index-mobile-menu: 2000;
   
   /* Opacity */
   --opacity-disabled: 0.4;

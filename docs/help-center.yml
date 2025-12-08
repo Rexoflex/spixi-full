@@ -166,9 +166,9 @@ sections:
       - id: fees-and-costs
         question: Are there any fees when using Spixi and IXI
         answer: |
-          - Chat messages and files Sending messages in Spixi is free within protocol limits.
-          - IXI payments Each transaction includes a small network fee paid in IXI to have it processed and recorded on the blockchain.
-          - The app itself Spixi is free to download and use. There are no subscriptions or in-app "unlock basic features" fees.
+          - Chat messages and files – Sending messages in Spixi is free within protocol limits.
+          - IXI payments – Each transaction includes a small network fee paid in IXI to have it processed and recorded on the blockchain.
+          - The app itself – Spixi is free to download and use. There are no subscriptions or in-app "unlock basic features" fees.
 
           You only pay network fees when you actually send IXI.
 

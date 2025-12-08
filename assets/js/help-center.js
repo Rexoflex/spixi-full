@@ -113,85 +113,110 @@ class HelpCenter {
 
   parseAnswer(answerText) {
     if (!answerText) return '';
-    
+
     const lines = answerText.trim().split('\n');
     let html = '';
     let currentContent = [];
-    let inList = false;
+    let listType = null; // null, 'ordered', 'unordered'
 
-    lines.forEach(line => {
+    // Helper to check if a line starts a list
+    const isListItem = (line) => {
+      if (!line) return false;
+      const trimmed = line.trim();
+      return trimmed.match(/^\d+\./) || trimmed.startsWith('-');
+    };
+
+    // Helper to check if line is a subtitle (ends with colon, or short intro before list)
+    const isSubtitle = (line, nextLine) => {
+      if (!line) return false;
+      const trimmed = line.trim();
+      // Ends with colon (traditional subtitle)
+      if (trimmed.match(/^[A-Z][^.!?]*:$/)) return true;
+      // All caps
+      if (trimmed === trimmed.toUpperCase() && trimmed.length > 2) return true;
+      // Short line (under 60 chars, no period at end) followed by a list item
+      if (trimmed.length < 60 && !trimmed.endsWith('.') && isListItem(nextLine)) return true;
+      return false;
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       const trimmedLine = line.trim();
-      
+      const nextLine = lines[i + 1];
+
       // Skip empty lines
       if (!trimmedLine) {
         if (currentContent.length > 0) {
-          html += this.flushContent(currentContent, inList);
+          html += this.flushContent(currentContent, listType);
           currentContent = [];
-          inList = false;
+          listType = null;
         }
-        return;
+        continue;
       }
 
-      // Check if it's a subtitle (ends with colon or is all caps)
-      if (trimmedLine.match(/^[A-Z][^.!?]*:$/) || trimmedLine === trimmedLine.toUpperCase()) {
+      // Check if it's a subtitle
+      if (isSubtitle(trimmedLine, nextLine)) {
         if (currentContent.length > 0) {
-          html += this.flushContent(currentContent, inList);
+          html += this.flushContent(currentContent, listType);
           currentContent = [];
-          inList = false;
+          listType = null;
         }
         html += `<div class="faq-item__content"><h4 class="faq-item__subtitle">${trimmedLine}</h4></div>`;
-        return;
+        continue;
       }
 
       // Check if it's a numbered list item
       if (trimmedLine.match(/^\d+\./)) {
-        if (!inList) {
+        if (listType !== 'ordered') {
           if (currentContent.length > 0) {
-            html += this.flushContent(currentContent, false);
+            html += this.flushContent(currentContent, listType);
             currentContent = [];
           }
-          inList = true;
+          listType = 'ordered';
         }
         currentContent.push(trimmedLine.replace(/^\d+\.\s*/, ''));
-        return;
+        continue;
       }
 
       // Check if it's a bullet list item
       if (trimmedLine.startsWith('-')) {
-        if (!inList) {
+        if (listType !== 'unordered') {
           if (currentContent.length > 0) {
-            html += this.flushContent(currentContent, false);
+            html += this.flushContent(currentContent, listType);
             currentContent = [];
           }
-          inList = true;
+          listType = 'unordered';
         }
         currentContent.push(trimmedLine.replace(/^-\s*/, ''));
-        return;
+        continue;
       }
 
       // Regular text
-      if (inList) {
-        html += this.flushContent(currentContent, true);
+      if (listType) {
+        html += this.flushContent(currentContent, listType);
         currentContent = [];
-        inList = false;
+        listType = null;
       }
       currentContent.push(trimmedLine);
-    });
+    }
 
     // Flush remaining content
     if (currentContent.length > 0) {
-      html += this.flushContent(currentContent, inList);
+      html += this.flushContent(currentContent, listType);
     }
 
     return html;
   }
 
-  flushContent(content, isList) {
+  flushContent(content, listType) {
     if (content.length === 0) return '';
-    
-    if (isList) {
+
+    if (listType === 'ordered') {
       const items = content.map(item => `<li>${item}</li>`).join('');
       return `<div class="faq-item__content"><ol class="faq-item__list">${items}</ol></div>`;
+    } else if (listType === 'unordered') {
+      const items = content.map(item => `<li>${item}</li>`).join('');
+      return `<div class="faq-item__content"><ul class="faq-item__list faq-item__list--unordered">${items}</ul></div>`;
     } else {
       const text = content.join(' ');
       return `<div class="faq-item__content"><p class="faq-item__text">${text}</p></div>`;
